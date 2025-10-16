@@ -7,6 +7,6 @@ roleRef:
   kind: ClusterRole
   name: tempostack-traces-reader
 subjects:
-  - kind: ServiceAccount
-    name: grafana-tempo
-    namespace: openshift-tempo-operator
+- kind: ServiceAccount
+  name: grafana-tempo
+  namespace: openshift-tempo-operator
