@@ -3,6 +3,8 @@ kind: ClusterRole
 metadata:
   name: tempostack-traces-reader
 rules:
+  - nonResourceURLs:
+      - /api/traces/v1/*
   - apiGroups:
       - 'tempo.grafana.com'
     resources:
@@ -12,3 +14,4 @@ rules:
       - traces
     verbs:
       - 'get'
+      - 'list'
