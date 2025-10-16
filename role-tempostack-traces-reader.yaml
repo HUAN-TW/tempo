@@ -1,17 +1,10 @@
-apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: tempostack-traces-reader
+  name: tempo-read
 rules:
   - nonResourceURLs:
       - /api/traces/v1/*
-  - apiGroups:
-      - 'tempo.grafana.com'
-    resources:
-      - dev
-      - prod
-    resourceNames:
-      - traces
     verbs:
-      - 'get'
-      - 'list'
+      - get
+      - list
